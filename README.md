@@ -1,127 +1,127 @@
-# Deep Focus - Wear OS Pomodoro & Deep Work App
+# ⏰ Deep Focus - Wear OS Pomodoro & Deep Work Timer
 
-یک اپلیکیشن مینیمال و آفلاین برای **Samsung Galaxy Watch 6 Classic** که ترکیبی از تایمر پومودورو و حالت Deep Work را ارائه می‌دهد.
+A minimal, offline Pomodoro & Deep Work timer app for **Samsung Galaxy Watch 6 Classic** and other Wear OS devices.
 
-## ✨ ویژگی‌ها
+![Wear OS](https://img.shields.io/badge/Wear%20OS-4.0+-4285F4?style=flat&logo=wearos&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=flat&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-1.5+-4285F4?style=flat&logo=jetpackcompose&logoColor=white)
 
-### ⏱ تایمر پومودورو
-- **25 دقیقه** کار متمرکز
-- **5 دقیقه** استراحت کوتاه
-- **15 دقیقه** استراحت بلند (بعد از 4 سیکل)
-- ویبره کوتاه در پایان هر بازه
+## ✨ Features
+
+### ⏱ Pomodoro Timer
+- **25 minutes** focused work sessions
+- **5 minutes** short breaks
+- **15 minutes** long break (after 4 sessions)
+- Vibration alert on phase completion
+- Session counter (1/4, 2/4, ...)
 
 ### 🧠 Deep Work Mode
-- حالت تمرکز عمیق
-- UI مخصوص و مینیمال
-- همان رفتار پومودورو با ظاهر متفاوت
+- **60 minutes** (1 hour) continuous focus
+- Minimal UI for maximum concentration
+- Same break logic as Pomodoro
 
-### 🎵 کنترل موزیک
-- کنترل Samsung Music از طریق MediaSession
-- Play خودکار با شروع تایمر
-- Pause خودکار با توقف/پایان تایمر
-- بدون باز شدن اپ پلیر
+### 🔋 Power Save Mode
+- Pure black AMOLED background
+- No background images loaded
+- Minimal UI elements
+- Maximum battery efficiency
 
-### 🎨 UI
-- تم تاریک مخصوص تمرکز
-- انتخاب پس‌زمینه از داخل تنظیمات
-- 3 رنگ ساده + 3 گرادیان Lo-Fi
-- متن بزرگ و خوانا
+### 🎨 Customization
+- **3 solid color backgrounds**: Dark, Purple, Blue
+- **4 preset image backgrounds**
+- **Custom background** from gallery
+- Swipe gestures for navigation
 
-## 📱 نحوه استفاده
+### 📱 UI Features
+- Dark theme optimized for focus
+- Large, readable timer display
+- Circular progress indicator
+- Swipe left/right navigation
 
-1. **آماده‌سازی موزیک:**
-   - ایرپاد را به ساعت وصل کنید
-   - Samsung Music را باز کنید
-   - Playlist مورد نظر (مثلاً "Lofi") را انتخاب و Pause کنید
+## 🛠 Technical Specs
 
-2. **شروع اپ:**
-   - اپ Deep Focus را باز کنید
-   - حالت **Pomodoro** یا **Deep Work** را انتخاب کنید
-   - دکمه Play را بزنید
-
-3. **کار کنید!**
-   - تایمر شروع می‌شود
-   - موزیک پخش می‌شود
-   - در پایان هر بازه ویبره خواهید داشت
-
-## 🛠 مشخصات فنی
-
-| مشخصه | مقدار |
-|-------|-------|
+| Spec | Value |
+|------|-------|
 | Platform | Wear OS |
 | Language | Kotlin |
 | UI Framework | Jetpack Compose for Wear OS |
-| compileSdk | 36 |
-| targetSdk | 36 |
+| compileSdk | 34 |
+| targetSdk | 34 |
 | minSdk | 30 |
-| Internet | ❌ نیاز ندارد |
+| Internet Required | ❌ No |
+| Permissions | Vibration only |
 
-## 📁 ساختار پروژه
+## 📁 Project Structure
 
 ```
 app/src/main/
 ├── java/com/example/pomodoro/
 │   ├── MainActivity.kt           # Main Compose Activity
 │   ├── data/
-│   │   ├── PomodoroState.kt     # Timer state & phases
+│   │   ├── PomodoroState.kt      # Timer state & durations
 │   │   └── PreferencesManager.kt # DataStore preferences
-│   ├── media/
-│   │   ├── MediaControllerManager.kt  # Samsung Music control
-│   │   └── NotificationListenerService.kt
 │   ├── ui/
 │   │   ├── components/
-│   │   │   ├── TimerDisplay.kt   # Main timer UI
-│   │   │   ├── ModeSelector.kt   # Mode selection
-│   │   │   └── SettingsScreen.kt # Background settings
+│   │   │   ├── TimerDisplay.kt   # Circular timer UI
+│   │   │   ├── ModeSelector.kt   # Mode selection screen
+│   │   │   └── SettingsScreen.kt # Background & power settings
 │   │   └── theme/
 │   │       └── Theme.kt          # Colors & theme
 │   └── viewmodel/
-│       └── PomodoroViewModel.kt  # Timer logic
+│       └── PomodoroViewModel.kt  # Timer logic & state
 └── res/
     ├── drawable/                 # Icons & backgrounds
     ├── values/                   # Colors, strings, themes
-    └── mipmap-anydpi-v26/       # App icon
+    └── mipmap-anydpi-v26/        # App icon
 ```
 
-## 🚀 نصب و اجرا
+## 🚀 Installation
 
-### پیش‌نیازها
-- Android Studio Arctic Fox یا بالاتر
+### Prerequisites
+- Android Studio Hedgehog or newer
 - Wear OS SDK
-- Galaxy Watch 6 Classic (یا امولاتور)
+- Galaxy Watch 6 Classic (or Wear OS emulator)
 
-### مراحل
-1. پروژه را در Android Studio باز کنید
-2. Gradle Sync انجام دهید
-3. ساعت را به USB یا WiFi وصل کنید
-4. Run → Select Device → Galaxy Watch
+### Build Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Drat1x/WearOS-Pomodoro.git
+   ```
+2. Open in Android Studio
+3. Sync Gradle
+4. Connect your watch via USB or WiFi
+5. Run → Select Device → Your Watch
 
 ### ADB Commands
 ```bash
-# لیست دستگاه‌ها
+# List connected devices
 adb devices
 
-# نصب APK
+# Install APK
 adb install app/build/outputs/apk/debug/app-debug.apk
 
-# لاگ
-adb logcat | grep -i pomodoro
+# Connect via WiFi
+adb connect <watch-ip>:5555
 ```
 
-## 🔐 دسترسی‌های مورد نیاز
+## 📱 Usage
 
-- `VIBRATE` - ویبره برای اعلان پایان بازه
-- `MEDIA_CONTENT_CONTROL` - کنترل پخش موزیک
-- `WAKE_LOCK` - روشن نگه داشتن صفحه (اختیاری)
+1. **Open the app** on your watch
+2. **Select mode**: Pomodoro (25 min) or Deep Work (60 min)
+3. **Tap Play** to start the timer
+4. **Work focused!** Vibration alerts when phase ends
+5. **Swipe right** to go back to mode selection
 
-## 📝 نکات مهم
-
-1. **اولین اجرا:** برای کنترل موزیک، ممکن است نیاز به دادن دسترسی Notification Listener در تنظیمات ساعت باشد.
-
-2. **بدون اینترنت:** اپ کاملاً آفلاین کار می‌کند.
-
-3. **تنها دستگاه:** فقط برای استفاده شخصی روی یک ساعت طراحی شده.
+### Settings
+- Swipe to Settings from mode selector
+- Choose background color or image
+- Enable Power Mode for battery saving
+- Pick custom background from gallery
 
 ## 📄 License
 
-MIT License - استفاده آزاد برای پروژه‌های شخصی
+MIT License - Feel free to use and modify!
+
+---
+
+Made with ❤️ for focus and productivity
