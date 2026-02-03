@@ -2,6 +2,8 @@
 
 A minimal, offline Pomodoro & Deep Work timer app for **Samsung Galaxy Watch 6 Classic** and other Wear OS devices.
 
+[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen?style=for-the-badge&logo=android)](https://github.com/Drat1x/WearOS-Pomodoro/raw/main/WearOS-Pomodoro.apk)
+
 ![Wear OS](https://img.shields.io/badge/Wear%20OS-4.0+-4285F4?style=flat&logo=wearos&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=flat&logo=kotlin&logoColor=white)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-1.5+-4285F4?style=flat&logo=jetpackcompose&logoColor=white)
