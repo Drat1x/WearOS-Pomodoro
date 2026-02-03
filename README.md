@@ -77,12 +77,74 @@ app/src/main/
 
 ## 🚀 Installation
 
-### Prerequisites
+### Method 1: Install APK via Wireless Debugging (Recommended)
+
+#### Step 1: Enable Developer Options on Watch
+1. Go to **Settings** → **About watch** → **Software**
+2. Tap **Software version** 5 times
+3. Developer mode is now enabled
+
+#### Step 2: Enable Wireless Debugging
+1. Go to **Settings** → **Developer options**
+2. Enable **ADB debugging**
+3. Enable **Wireless debugging**
+4. Tap on **Wireless debugging** to see IP and Port
+
+#### Step 3: Pair Watch with PC (First time only)
+1. On watch: **Wireless debugging** → **Pair new device**
+2. Note the **Pairing code** and **IP:Port**
+3. On PC, run:
+   ```bash
+   adb pair <IP>:<PAIRING_PORT>
+   ```
+   Example:
+   ```bash
+   adb pair 192.168.1.100:12345
+   ```
+4. Enter the pairing code when prompted
+
+#### Step 4: Connect to Watch
+```bash
+adb connect <IP>:<PORT>
+```
+Example:
+```bash
+adb connect 192.168.1.100:5555
+```
+
+#### Step 5: Install APK
+```bash
+adb install app-debug.apk
+```
+Or with full path:
+```bash
+adb install "C:\path\to\WearOS-Pomodoro\app-debug.apk"
+```
+
+#### Useful ADB Commands
+```bash
+# List connected devices
+adb devices
+
+# Disconnect from watch
+adb disconnect
+
+# Uninstall app
+adb uninstall com.example.pomodoro
+
+# Restart ADB server (if issues)
+adb kill-server
+adb start-server
+```
+
+### Method 2: Build from Source
+
+#### Prerequisites
 - Android Studio Hedgehog or newer
 - Wear OS SDK
 - Galaxy Watch 6 Classic (or Wear OS emulator)
 
-### Build Steps
+#### Build Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/Drat1x/WearOS-Pomodoro.git
@@ -91,18 +153,6 @@ app/src/main/
 3. Sync Gradle
 4. Connect your watch via USB or WiFi
 5. Run → Select Device → Your Watch
-
-### ADB Commands
-```bash
-# List connected devices
-adb devices
-
-# Install APK
-adb install app/build/outputs/apk/debug/app-debug.apk
-
-# Connect via WiFi
-adb connect <watch-ip>:5555
-```
 
 ## 📱 Usage
 
