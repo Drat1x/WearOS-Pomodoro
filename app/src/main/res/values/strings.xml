@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Deep Focus</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="focus">Focus</string>
+    <string name="short_break">Break</string>
+    <string name="long_break">Long Break</string>
+    <string name="deep_work">Deep Work</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="settings">Settings</string>
+    <string name="background">Background</string>
+</resources>

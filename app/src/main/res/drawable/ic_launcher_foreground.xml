@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Pomodoro Timer Icon -->
+    <group android:translateX="27" android:translateY="27">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M27,0C12.09,0 0,12.09 0,27s12.09,27 27,27 27,-12.09 27,-27S41.91,0 27,0zM27,48.6c-11.93,0 -21.6,-9.67 -21.6,-21.6S15.07,5.4 27,5.4 48.6,15.07 48.6,27 38.93,48.6 27,48.6z"/>
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M28.35,13.5h-2.7v16.2l12.69,7.61 1.35,-2.21 -11.34,-6.8z"/>
+    </group>
+</vector>
