@@ -77,6 +77,28 @@ app/src/main/
 
 ## 🚀 Installation
 
+### Prerequisites: Install ADB Platform Tools
+
+Download and install ADB Platform Tools for your OS:
+
+| OS | Download Link |
+|----|---------------|
+| Windows | [platform-tools-latest-windows.zip](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) |
+| macOS | [platform-tools-latest-darwin.zip](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip) |
+| Linux | [platform-tools-latest-linux.zip](https://dl.google.com/android/repository/platform-tools-latest-linux.zip) |
+
+**Windows Setup:**
+1. Download and extract the zip
+2. Add the folder path to System Environment Variables → PATH
+3. Or open terminal in the extracted folder
+
+**Verify Installation:**
+```bash
+adb version
+```
+
+---
+
 ### Method 1: Install APK via Wireless Debugging (Recommended)
 
 #### Step 1: Enable Developer Options on Watch
